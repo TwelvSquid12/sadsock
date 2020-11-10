@@ -550,62 +550,62 @@ $(document).ready(function()
 
 	$('#boost_button').on('touchstart', function()
 	{
-		socket.emit('action', { user: username, direction: 'boost' }); 
+		io.in('game').emit('action', { user: username, direction: 'boost' }); 
 		document.getElementById("boostIMG").src="art/boost.png";
 	});
 
     $('#fwd_button').on('touchstart', function()
 	{
-		socket.emit('action', { user: username, direction: 'acc_down' }); 
+		io.in('game').emit('action', { user: username, direction: 'acc_down' }); 
 		//navigator.vibrate(100);
 		//touchingFwd = true;
 	});
 
 	$('#fwd_button').on('touchend', function()
 	{
-		socket.emit('action', { user: username, direction: 'acc_up' }); 
+		io.in('game').emit('action', { user: username, direction: 'acc_up' }); 
 		//navigator.vibrate(100);
 		//touchingFwd = false;
 	});
 
 	$('#back_button').on('touchstart', function()
 	{
-		socket.emit('action', { user: username, direction: 'rev_down' }); 
+		io.in('game').emit('action', { user: username, direction: 'rev_down' }); 
 		//navigator.vibrate(100);
 		//touchingBack = true;
 	});
 
 	$('#back_button').on('touchend', function()
 	{
-		socket.emit('action', { user: username, direction: 'rev_up' });
+		io.in('game').emit('action', { user: username, direction: 'rev_up' });
 		 //navigator.vibrate(100);
 		 //touchingBack=false;
 	});
 
 	$('#left_button').on('touchstart', function()
 	{
-		socket.emit('action', { user: username, direction: 'turnL_down' }); 
+		io.in('game').emit('action', { user: username, direction: 'turnL_down' }); 
 		//navigator.vibrate(100);
 		//touchingLeft=true;
 	});
 
 	$('#left_button').on('touchend', function()
 	{
-		socket.emit('action', { user: username, direction: 'turnL_up' }); 
+		io.in('game').emit('action', { user: username, direction: 'turnL_up' }); 
 		//navigator.vibrate(100);
 		//touchingLeft=false;
 	});
 
 	$('#right_button').on('touchstart', function()
 	{
-		socket.emit('action', { user: username, direction: 'turnR_down' }); 
+		io.in('game').emit('action', { user: username, direction: 'turnR_down' }); 
 		//navigator.vibrate(100);
 		//touchingRight=true;
 	});
 
 	$('#right_button').on('touchend', function()
 	{
-		socket.emit('action', { user: username, direction: 'turnR_up' }); 
+		io.in('game').emit('action', { user: username, direction: 'turnR_up' }); 
 		//navigator.vibrate(100);
 		//touchingRight=false;
 	});
