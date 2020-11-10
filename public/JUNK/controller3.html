@@ -1,0 +1,100 @@
+<html>
+
+<head>
+
+    <meta 
+    name='viewport' 
+    content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+    />
+
+    <meta name="theme-color" content="#38005E" />
+
+  <link type="text/css" rel="stylesheet"  href="/controller.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/controller.js"></script>
+
+
+
+</head>
+
+
+
+<body>
+
+<div id="loading">
+<img id="loading-image" src="loading.gif" alt="Loading..." />
+</div>  
+  
+  <ul class="pages">
+    <li class="chat page">
+
+
+ <div id="namePanel" class="centered2">
+	      		<h2>
+	    		USERNAME
+	    		</h2>
+
+	      </div>
+
+
+    <div class="container">
+
+     
+
+       <img src="score.png" style="width:100%;">
+
+	      <div id="scorePanel" class="centered">
+	      		<h1>
+	    		SCORE:
+	    		</h1>
+
+	      </div>
+
+      </div>
+
+      <div id="buttonContainer">
+
+
+    
+      <div id="btnLEFT" style="width:49%;" class=button>
+
+          <div id="leftText"  class="button_labelLEFT">LEFT</div>
+      </div>
+      <div id="btnRIGHT" style="width:49%;" class=button>
+
+          <div  id="rightText" class="button_labelRIGHT">RIGHT</div>
+      </div>
+   
+
+      </div>
+
+    </li>
+
+    <li class="login page">
+
+    <div id="logo" class="logoClass"></div>
+
+    <div id="usernameText" class="userNameClass"></div>
+
+      <div class="form">
+       
+        <input class="usernameInput" type="text" maxlength="14" />
+
+
+
+      </div>
+
+      <div id="go" class="goClass"></div>
+
+
+    
+	</div>
+
+    </li>
+  </ul>
+
+
+</body>
+
+</html>

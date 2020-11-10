@@ -1,0 +1,689 @@
+html, body 
+{
+	height: 100%;
+	margin: 0px;
+	font-family: 'PressStart2P', sans-serif;
+	color: white;
+  text-align: center;
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
+}
+
+body { min-height:540px; }     
+body[orient="portrait"] { min-height:540px; }
+body[orient="landscape"] { min-height:400px; }
+
+html {
+  position: fixed;
+}
+
+input { 
+  text-align: center; 
+  color:#FFCC00;
+}
+
+::placeholder 
+{
+  color: white;
+  opacity: 1;
+  text-align:center;
+}
+
+#landing_page
+{
+  display: block;
+}
+
+#car_buttons
+{
+  display: none;
+  z-index: 6;
+}
+
+#left_arrow
+{
+  width:inherit;
+  pointer-events: none;
+}
+
+#right_arrow
+{
+  width:inherit;
+  pointer-events: none;
+  transform: rotate(180deg);
+}
+
+#up_arrow
+{
+  margin-top:10px;
+  width:inherit;
+  pointer-events: none;
+  transform: rotate(270deg);
+}
+
+#down_arrow
+{
+  margin-top:10px;
+  width:inherit;
+  pointer-events: none;
+  transform: rotate(90deg);
+}
+
+#BG_bubble
+{
+  position: fixed;
+  width:100%;
+  height:90%;
+
+  bottom:0;
+  left:0;
+  z-index: 2;
+}
+
+
+/* FOR PORTRAIT - I.E. DEFAULT .CSS: */
+@media only screen and (max-width: 640px) and (orientation: portrait) 
+{
+
+  .car_button
+  {
+    width:20%;
+    position:fixed;
+    z-index: 6;
+  }
+  
+  #car_1
+  {
+    bottom:20%;
+    left:15%;
+  }
+  #car_2
+  {
+    bottom:35%;
+    left:15%;
+  }
+  #car_3
+  {
+    bottom:50%;
+    left:15%;
+  }
+  #car_4
+  {
+    bottom:65%;
+    left:15%;
+  }
+  #car_5
+  {
+    bottom:20%;
+    left:40%;
+  }
+  #car_6
+  {
+    bottom:35%;
+    left:40%;
+  }
+  #car_7
+  {
+    bottom:50%;
+    left:40%;
+  }
+  #car_8
+  {
+    bottom:65%;
+    left:40%;
+  }
+
+/* !!!!!!!!!!!!!!!! NEW CREATIONS OF THE CSS VARIETY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  #boost_button
+  {
+    position: absolute;
+    
+    right:10px;
+    top:10px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:160px;
+    height:160px;
+  }
+  
+  #left_button
+  {
+    position: absolute;
+  
+    left:10px;
+    top:10px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:160px;
+    height:160px;
+  }
+  
+  #right_button
+  {
+    position: absolute;
+  
+    left:10px;
+    top:100px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:160px;
+    height:160px;
+  }
+  
+  #resetIMG
+  {
+    height:100%;
+    margin-left:-2.5px;
+    pointer-events: none;
+  }
+  
+  #boostIMG
+  {
+    height:100%;
+    pointer-events: none;
+  }
+  
+  #reset_button
+  {
+    position: fixed;
+  
+    right:70px;
+    top:25px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    height:28%;
+    width:20%;
+    margin-left:10%;
+  } 
+  
+  .green {
+    background-color: green;
+   }
+   
+  
+  #fwd_button
+  {
+    position: absolute;
+  
+    right:10px;
+    bottom:10px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:160px;
+    height:160px;
+  }
+  
+  #back_button
+  {
+    position: absolute;
+  
+    left:10px;
+    bottom:10px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:160px;
+    height:160px;
+  }
+  
+  /* !!!!!!!!!!!!!!!! END NEW CREATIONS BLOCK SO I DONT GET CONFUSED AND SAD !!!!!!!!!!!!!! */
+  
+  #header_bubble
+  {
+    position: fixed;
+
+    height:70%;
+
+    top:10%;
+    right:0;
+
+    z-index: 3;
+  }
+
+
+  #start_button
+  {
+    position: fixed;
+
+    height:25%;
+
+    top:40%;
+    left:10%;
+
+    z-index: 4;
+  }
+
+  #name_input
+  {
+    position:fixed;
+    transform: rotate(90deg);
+    z-index: 4;
+
+    right:20%;
+    top:50%;
+
+    background-color:#00678F;
+    border-color: white;
+    border-radius: 5px;
+
+    width:75%;
+    height:5%;
+  }
+
+
+}
+
+
+
+/* Following works on landscape view */
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+  /* !!!!!!!!!!!!!!!! NEW CREATIONS OF THE CSS VARIETY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+/* BOTTOM ROW */
+  #car_1
+  {
+    bottom:10%;
+    right:20%;
+  }
+
+  #car_2
+  {
+    bottom:10%;
+    right:35%;
+  }
+  #car_3
+  {
+    bottom:10%;
+    right:50%;
+  }
+  #car_4
+  {
+    bottom:10%;
+    right:65%;
+  }
+
+/* END BOTTOM ROW */
+
+
+
+/* TOP ROW */
+  #car_5
+  {
+    bottom:40%;
+    right:20%;
+  }
+
+  #car_6
+  {
+    bottom:40%;
+    right:35%;
+  }
+
+  #car_7
+  {
+    bottom:40%;
+    right:50%;
+  }
+
+  #car_8
+  {
+    bottom:40%;
+    right:65%;
+  }
+
+  .car_button
+  {
+    width:10%;
+    position:fixed;
+    z-index: 6;
+  }
+  /* END TOP ROW */
+  
+  
+  
+
+  #start_button
+  {
+      position: fixed;
+
+      height:30%;
+
+      bottom:5%;
+    
+
+      z-index: 4;
+
+      transform: rotate(-90deg);
+  }
+
+  #name_input
+  {
+      position:fixed;
+    
+      z-index: 4;
+
+      right:15%;
+      top:50%;
+
+      background-color:#00678F;
+      border-color: white;
+      border-radius: 5px;
+
+      width:65%;
+      height:10%;
+  }
+
+  #header_bubble
+  {
+    position: fixed;
+    height:140%;
+    top:-55%;
+    z-index: 3;
+    transform: rotate(-90deg);
+  }
+  
+
+  #boost_button
+  {
+    position: absolute;
+    
+    left:10px;
+    top:10px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:80px;
+    height:80px;
+
+    transform: rotate(-90deg);
+
+  }
+  
+  #left_button
+  {
+    position: absolute;
+  
+    left:10px;
+    bottom:10px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:160px;
+    height:160px;
+
+    transform: rotate(-90deg);
+  }
+  
+  #right_button
+  {
+    position: absolute;
+  
+    left:160px;
+    bottom:10px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:160px;
+    height:160px;
+
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+  
+  #resetIMG
+  {
+    height:100%;
+    margin-left:-2.5px;
+    pointer-events: none;
+    
+  }
+  
+  #boostIMG
+  {
+    height:100%;
+    pointer-events: none;
+  }
+  
+  #reset_button
+  {
+    position: fixed;
+  
+    right:70px;
+    top:0px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    height:40%;
+    width:10%;
+    margin-right:33%;
+
+    transform: rotate(-90deg) ;
+  } 
+  
+  .green 
+  {
+    background-color: green;
+  }
+   
+  
+  #fwd_button
+  {
+    position: absolute;
+  
+    right:10px;
+    top:10px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:160px;
+    height:160px;
+
+    transform: rotate(-90deg);
+  }
+  
+  #back_button
+  {
+    position: absolute;
+  
+    right:10px;
+    bottom:20px;
+  
+    background-color:rebeccapurple;
+    border-radius: 15px;
+    opacity:0.9;
+  
+    width:160px;
+    height:160px;
+
+    transform: rotate(-90deg) ;
+  }
+  
+  /* !!!!!!!!!!!!!!!! END NEW CREATIONS BLOCK SO I DONT GET CONFUSED AND SAD !!!!!!!!!!!!!! */
+}
+
+
+
+
+#loginPage
+{
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background: url(art/BG.png) ;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#mtnLogo
+{
+    height: 150px;
+	  width: 150px;
+	  margin-top: 30px;
+}
+
+
+#userNameInput
+{
+	background-color: transparent;
+	background: url(InputPanel.png) no-repeat;
+	color: black;
+	background-size: 100% 100%;
+	outline: none;
+	text-align: center;
+	width: 400px;
+	height: 60px;
+
+	font-size: 200%;
+	letter-spacing: 3px;
+
+	color: #000000;
+	font-weight: 100;
+}
+
+
+#goButton
+{
+  height: 15%;
+	width: auto;
+	margin-top: 30px;
+}
+
+
+#playPage
+{
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color:black;
+    background-size: 100%;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    /* transform: rotate(-90deg) scale(0.45, 2.3); */
+}
+
+#namePanel
+{
+  position: fixed;
+  margin-bottom: 1%;
+  bottom:0;
+  text-align:center;
+  margin-left:32%;
+}
+
+#scorePanel
+{
+  position: relative;
+  text-align: center;
+  color: black;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+}
+
+.centeredText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.controlButton
+{
+  position: absolute;
+  border-color: #000000;
+  padding:10px;
+  background-color: aqua;
+  opacity: 0.5;
+}
+
+#reverse_button
+{
+ height:30%;
+ width:35%;
+ margin-left:5%;
+ margin-top:5%;
+}
+
+#accel_button
+{
+ height:30%;
+ width:35%;
+ margin-left:55%;
+ margin-top:5%;
+}
+
+#power_button
+{
+ height:25%;
+ width:35%;
+ margin-top:60%;
+ margin-left:55%;
+}
+
+
