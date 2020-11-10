@@ -360,7 +360,7 @@ $(document).ready(function()
 	{
 		console.log(data);
 
-	    var userData = JSON.parse(data);
+	    var userData = data;// JSON.parse(data);
 
 		if(userData.username === username)
 		{
