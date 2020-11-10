@@ -350,9 +350,17 @@ $(document).ready(function()
 		$.get( "https://mustardinteractive.co.za/MTN_wheels/api/update_score.php?username="+playerName+"&score="+userData.score, function( data ) {});
 	});
 
+
+	socket.on('enterGame', (data) => 
+	{
+		console.log(data); 
+	});
+
 	socket.on('user left', (data) => 
 	{
-		var userData = JSON.parse(data);	
+		console.log(data);
+
+	    var userData = JSON.parse(data);
 
 		if(userData.username === username)
 		{
