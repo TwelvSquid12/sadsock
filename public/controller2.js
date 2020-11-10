@@ -351,7 +351,7 @@ $(document).ready(function()
 	});
 
 
-	socket.on('enterGame', (data) => 
+	socket.on('add user', (data) => 
 	{
 		console.log(data); 
 	});
